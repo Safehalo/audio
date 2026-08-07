@@ -1,0 +1,31 @@
+#!/bin/bash
+
+LOGFILE=/home/sh/play_sequence.log
+
+DAY=$(date +%d)
+
+if [ $((DAY % 2)) -eq 1 ]; then
+    # Odd day: 6:50 PM
+    HOUR=18
+    MIN=50
+else
+    # Even day: 5:50 PM
+    HOUR=17
+    MIN=50
+fi
+
+NOW_HOUR=$(date +%H)
+NOW_MIN=$(date +%M)
+
+if [ "$NOW_HOUR" -eq "$HOUR" ] && [ "$NOW_MIN" -eq "$MIN" ]; then
+    echo "$(date): Playing Gayatri" >> "$LOGFILE"
+    /usr/bin/aplay /home/sh/Gayatri_5_16k.wav
+
+    # Wait 10 seconds
+    sleep 10
+
+    echo "$(date): Playing Temple" >> "$LOGFILE"
+    /usr/bin/aplay /home/sh/Temple_5_16k.wav
+
+    echo "$(date): Finished" >> "$LOGFILE"
+fi
