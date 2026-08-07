@@ -15,7 +15,7 @@ cd ~/sh_pc_v3_device
 ```bash
 nano play_sequence.sh
 ```
-ADD ABOVE SCRIPT
+add above script
 ---
 
 ## Step 3: Save and exit Nano
