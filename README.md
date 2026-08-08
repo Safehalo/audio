@@ -5,7 +5,7 @@ This guide explains how to automatically play the Gayatri and Temple audio files
 ## Step 1: Go to the project folder
 
 ```bash
-cd ~/sh_pc_v3_device
+cd ~/music
 ```
 
 ---
@@ -31,7 +31,7 @@ Press:
 ## Step 4: Make the script executable
 
 ```bash
-chmod +x ~/sh_pc_v3_device/play_sequence.sh
+chmod +x ~/music/play_sequence.sh
 ```
 
 ---
@@ -39,7 +39,7 @@ chmod +x ~/sh_pc_v3_device/play_sequence.sh
 ## Step 5: Test the script manually
 
 ```bash
-~/sh_pc_v3_device/play_sequence.sh
+~/music/play_sequence.sh
 ```
 
 > **Note:** If the current time does not match the configured playback time, nothing will play. This is expected.
@@ -57,7 +57,7 @@ crontab -e
 Add the following line:
 
 ```cron
-* * * * * /home/sh/sh_pc_v3_device/play_sequence.sh
+* * * * * /home/sh/music/play_sequence.sh
 ```
 
 This runs the script every minute. The script checks the current day and time before playing the audio.
@@ -83,7 +83,7 @@ crontab -l
 Expected output:
 
 ```cron
-* * * * * /home/sh/sh_pc_v3_device/play_sequence.sh
+* * * * * /home/sh/music/play_sequence.sh
 ```
 
 ---
@@ -93,13 +93,13 @@ Expected output:
 View the log:
 
 ```bash
-cat /home/sh/play_sequence.log
+cat /home/sh/music/play_sequence.log
 ```
 
 Or monitor it live:
 
 ```bash
-tail -f /home/sh/play_sequence.log
+tail -f /home/sh/music/play_sequence.log
 ```
 
 Example output:
