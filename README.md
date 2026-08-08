@@ -31,7 +31,7 @@ Press:
 ## Step 4: Make the script executable
 
 ```bash
-chmod +x ~/music/play_sequence.sh
+chmod +x /home/sh/music/play_sequence.sh
 ```
 
 ---
@@ -39,7 +39,7 @@ chmod +x ~/music/play_sequence.sh
 ## Step 5: Test the script manually
 
 ```bash
-~/music/play_sequence.sh
+/home/sh/music/play_sequence.sh
 ```
 
 > **Note:** If the current time does not match the configured playback time, nothing will play. This is expected.
